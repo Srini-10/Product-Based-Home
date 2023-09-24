@@ -1,0 +1,92 @@
+.Client-Title {
+    color: #000000;
+    margin-left: 4.5%;
+}
+.Client-Title h1 {
+    font-size: 55px;
+    font-weight: 600;
+}
+.Client-Title p {
+    font-size: 15px;
+    margin-left: 3%;
+}
+.marquee-items{
+    overflow-x: hidden;
+}
+.c-section__title {
+    padding: var(--s2) var(--s3) calc(var(--s6) * 1.8);
+    margin: 0 calc(var(--s3) * -1);
+    color: #000000;
+    font-size: var(--s4);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    text-align: center;
+}
+.marquee-scroll {
+    display: flex;
+    justify-content: space-evenly;
+    margin-inline: 2.5rem;
+    height: 400px;
+    width: calc(250px * 11.5);
+    margin-top: 70px;
+    animation: scroll 30s infinite linear;
+}
+@keyframes scroll {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translateX(calc(-250px * 9));
+    }
+}
+.marquee-scroll:hover {
+    animation-play-state: paused;
+}
+
+.marquee-items::before,
+.marquee-items::after {
+    background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    height: 400px;
+    position: absolute;
+    width: 30%;
+    top: 287.5%;
+    z-index: 2;
+}
+
+.marquee-items::before{
+    left: 0;
+}
+.marquee-items::after{
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.marquee-items .marquee-scroll .marquee-item{
+    box-shadow: 0 7px 20px rgba(100, 28, 2, 0.135);
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    width: 250px;
+    height: 300px;
+}
+
+.marquee-item {
+    width: 100%;
+}
+.marquee-item:hover {
+    transform: scale(1.2);
+}
+
+.marquee-item img {
+    width: 150px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.marquee-item span {
+    text-align: center;  
+}
